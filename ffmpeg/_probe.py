@@ -13,7 +13,7 @@ def probe(filename, cmd='ffprobe', timeout=None, **kwargs):
             The stderr output can be retrieved by accessing the
             ``stderr`` property of the exception.
     """
-    args = [cmd, '-show_format', '-show_streams', '-of', 'json']
+    args = [cmd, '-show_format', '-show_streams', '-of', 'json', '-report']
     args += convert_kwargs_to_cmd_line_args(kwargs)
     args += [filename]
 
